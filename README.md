@@ -4,15 +4,13 @@
 FBGES is a browser extension to improve the user interface for Facebook Gaming.
 
 ```
-THIS EXTENSION IS NOT CREATED BY FACEBOOK OR ASSOCIATED WITH FACEBOOK IN ANY WAY. DO NOT CONTACT THEM FOR SUPPORT!
+THIS EXTENSION IS NOT CREATED BY FACEBOOK OR ASSOCIATED WITH FACEBOOK IN ANY WAY.
+DO NOT CONTACT THEM FOR SUPPORT!
 ```
 
 ```
 THIS EXTENSION IS IN BETA. EXPECT BUGS AND PLEASE REPORT ISSUES TO THE AUTHOR. THANKS!
 ```
-
-## Installation
-The plan is to make the extension available from the Chrome web store, but right now the extension must be installed by downloading the [latest release](https://github.com/CivBase/facebook-gaming-enhancement-suite/releases). The plan is to add Firefox support soon(tm), but right now only Chrome is supported.
 
 ## Usage
 The design of the user interface for Facebook Gaming is contentious and lacks customization options. Instead of re-designing the interface according to the author's preferences, the Facebook Gaming Enhancement Suite makes it easy for users to fine-tune aspects of the interface themselves. Simply navigate to a Facebook Gaming stream in your browser, then open the extension to access the controls.
@@ -55,3 +53,6 @@ Like                 | Whether to show the "Like" lins that normally go below ch
 Timestamp            | Whether to show timestamps that normally go below chat bubbles.                  | Hide      
 Location             | Where to put links that normally go below chat bubbles.                          | Right     
 Opacity              | Transparency of the links that normally go below chat bubbles.                   | 50%       
+
+## Platforms
+The plan is to add Firefox support soon(tm), but right now only Chrome is supported.

@@ -3,7 +3,7 @@
     "name": "Facebook Gaming Enhancement Suite",
     "version": "0.1.0",
     "author": "CivBase",
-    "description": "UI improvements for the Facebook Gaming streaming platform",
+    "description": "UI customization for the Facebook Gaming streaming platform",
     "homepage_url": "https://github.com/CivBase/facebook-gaming-enhancement-suite",
     "background": {
         "service_worker": "background.js"
