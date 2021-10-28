@@ -1,0 +1,200 @@
+body {
+    background-color: #242526;
+    border: 1px solid #484848;
+    color: #e4e6eb;
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    min-width: 350px;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+#topLinks {
+    margin-top: -15px;
+    text-align: center;
+    width: 100%;
+}
+
+#topLinks a {
+    color: #ffffff;
+    font-size: 32pt;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+#topLinks a:hover {
+    color: #dddddd;
+}
+
+/***** table *****/
+table {
+    border-collapse: collapse;
+    max-width: 100%;
+    width: 100%;
+}
+
+td,
+th {
+    border-top: 1px solid #484848;
+    padding: 0.25rem;
+    vertical-align: top;
+}
+
+tbody tr:first-child td,
+tbody tr:first-child th {
+    border: 0;
+}
+
+thead td,
+thead th {
+    background-color: #393939;
+    border-bottom: 4px solid #484848;
+    border-top: 1px solid #484848;
+    vertical-align: bottom;
+}
+
+tr.control td {
+    white-space: nowrap;
+}
+
+tr.control td:last-child {
+    width: 100%
+}
+
+/***** select *****/
+select {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 0;
+    border-radius: 4px;
+    color: #cccccc;
+    font-size: 1rem;
+    padding: 0.15rem 0.3rem;
+}
+
+select option {
+    color: #242526;
+}
+
+/***** control indicator *****/
+.control-indicator {
+    font-size: 1.5rem;
+    padding-top: .35rem;
+    padding-bottom: 0;
+}
+
+.control-indicator .detected {
+    color: #00dd00;
+    display: block;
+    margin-top: -.5rem;
+}
+
+.control-indicator .not-detected {
+    color: red;
+    display: block;
+    margin-top: -.5rem;
+}
+
+.control-indicator .searching {
+    animation: spin 4s linear infinite;
+    border: 4px solid #484848;
+    border-top: 4px solid #3366ff;
+    border-radius: 50%;
+    display: block;
+    height: .8rem;
+    margin-left: .1rem;
+    margin-top: .1rem;
+    width: .8rem;
+}
+
+.control-indicator .searching-with-store {
+    animation: spin 4s linear infinite;
+    border: 4px solid #484848;
+    border-top: 4px solid #ffdd00;
+    border-radius: 50%;
+    display: block;
+    height: .8rem;
+    margin-left: .1rem;
+    margin-top: .1rem;
+    width: .8rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/***** control toggle *****/
+.control-toggle {
+    padding-top: .6rem;
+    padding-bottom: 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 1rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    border-radius: 1rem;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #484848;
+    transition: .4s;
+}
+
+.slider:before {
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    height: .9rem;
+    width: .9rem;
+    left: .05rem;
+    bottom: .05rem;
+    background-color: #e4e6eb;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #3366ff;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #3366ff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(1.1rem);
+}
+
+input:disabled + .slider {
+    cursor: default;
+}
+
+input:disabled + .slider:before {
+    background-color: #888888;
+}
+
+/***** control-select *****/
+.control-select select {
+    width: 100%;
+}
