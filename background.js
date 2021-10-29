@@ -1631,8 +1631,6 @@ ${style.trim()}
                     element.state.selector = selector;
                     return true;
                 });
-
-                self.updateControls();
             }
 
             if (oldControlStates !== undefined) {
@@ -1647,10 +1645,9 @@ ${style.trim()}
                     control.state.selected = state.selected;
                     return true;
                 });
-
-                self.storeControls();
-                self.updateInterface();
             }
+
+            self.updateControls();
         });
 
         // update styles and find elements on page load
