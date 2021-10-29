@@ -1315,10 +1315,11 @@ ${commentLinks.state.selector} {
             return;
         }
 
-        if (element.state.selector !== null) {
+        if (element.state.status === 'detected') {
             return;
         }
 
+        console.log(`DEBUG: setElementSelector: ${elementId} ${element.state.status} -> detected`);
         element.state.status = 'detected';
         element.state.selector = selector;
         self.storeOldElementSelectors();
@@ -1336,6 +1337,7 @@ ${commentLinks.state.selector} {
             return;
         }
 
+        console.log(`DEBUG: setElementNotDetected: ${elementId} ${element.state.status} -> not-detected`);
         element.state.status = 'not-detected';
         self.updateControls();
     };
@@ -1556,6 +1558,7 @@ ${style.trim()}
      */
     self.reset = () => {
         Object.entries(self.elements).every(([elementId, element]) => {
+            console.log(`DEBUG: reset: ${elementId} ${element.state.status} -> searching`);
             element.state = {
                 status: 'searching',
                 selector: null
@@ -1627,8 +1630,12 @@ ${style.trim()}
                         return true;
                     }
 
-                    element.state.status = 'searching-with-store';
-                    element.state.selector = selector;
+                    if (element.state.status === 'searching') {
+                        console.log(`DEBUG: main: ${elementId} searching -> searching-with-store`);
+                        element.state.status = 'searching-with-store';
+                        element.state.selector = selector;
+                    }
+
                     return true;
                 });
             }
@@ -1641,8 +1648,11 @@ ${style.trim()}
                         return true;
                     }
 
-                    control.state.enabled = state.enabled;
-                    control.state.selected = state.selected;
+                    if (control.state.status === 'searching') {
+                        control.state.enabled = state.enabled;
+                        control.state.selected = state.selected;
+                    }
+
                     return true;
                 });
             }
