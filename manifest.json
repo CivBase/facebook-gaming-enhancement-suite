@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Facebook Gaming Enhancement Suite",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "author": "CivBase",
     "description": "UI customization for the Facebook Gaming streaming platform",
     "homepage_url": "https://github.com/CivBase/facebook-gaming-enhancement-suite",

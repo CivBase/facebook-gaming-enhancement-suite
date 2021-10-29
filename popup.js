@@ -105,12 +105,11 @@ let POPUP = (function() {
                     tdIndicator.className = 'control-indicator';
 
                     let spanSearching = document.createElement('span');
-                    spanSearching.style.display = 'none';
                     spanSearching.className = 'searching';
                     tdIndicator.appendChild(spanSearching);
 
                     let spanSearchingWithStore = document.createElement('span');
-                    // spanSearchingWithStore.style.display = 'none';
+                    spanSearchingWithStore.style.display = 'none';
                     spanSearchingWithStore.className = 'searching-with-store';
                     tdIndicator.appendChild(spanSearchingWithStore);
 

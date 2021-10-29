@@ -727,7 +727,7 @@ ${commentBubble.state.selector} {
     border-radius: 6px;
 }
 
-${commentBubbleInner.selector} {
+${commentBubbleInner.state.selector} {
     padding: 3px 4px;
 }`
                 } else if (selected === 'None') {
@@ -1315,6 +1315,10 @@ ${commentLinks.state.selector} {
             return;
         }
 
+        if (element.state.selector !== null) {
+            return;
+        }
+
         element.state.status = 'detected';
         element.state.selector = selector;
         self.storeOldElementSelectors();
@@ -1488,7 +1492,10 @@ ${commentLinks.state.selector} {
                     control.state.selected);
 
                 if (style !== undefined) {
-                    styles += `\n${style}\n`;
+                    styles += `
+/* ${controlId} */
+${style.trim()}
+`;
                 }
             }
 
