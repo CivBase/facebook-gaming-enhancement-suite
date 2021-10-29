@@ -1337,6 +1337,10 @@ ${commentLinks.state.selector} {
             return;
         }
 
+        if (element.state.status === 'detected') {
+            return true;
+        }
+
         console.log(`DEBUG: setElementNotDetected: ${elementId} ${element.state.status} -> not-detected`);
         element.state.status = 'not-detected';
         self.updateControls();
